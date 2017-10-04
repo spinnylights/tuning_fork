@@ -20,6 +20,8 @@ gem 'uglifier', '>= 1.3.0'
 # gem 'therubyracer', platforms: :ruby
 # Use Haml for templates
 gem 'haml-rails', '~> 1.0'
+# Use Foundation for the CSS framework
+gem 'foundation-rails'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
