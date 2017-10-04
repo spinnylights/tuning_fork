@@ -10,12 +10,38 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171004045322) do
+ActiveRecord::Schema.define(version: 20171004084502) do
 
   create_table "days", force: :cascade do |t|
     t.date "calendar"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "scratches", force: :cascade do |t|
+    t.string "name"
+    t.text "items"
+    t.integer "task_group_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["task_group_id"], name: "index_scratches_on_task_group_id"
+  end
+
+  create_table "task_groups", force: :cascade do |t|
+    t.string "name"
+    t.integer "day_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["day_id"], name: "index_task_groups_on_day_id"
+  end
+
+  create_table "tasks", force: :cascade do |t|
+    t.string "name"
+    t.boolean "status"
+    t.integer "task_group_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["task_group_id"], name: "index_tasks_on_task_group_id"
   end
 
 end

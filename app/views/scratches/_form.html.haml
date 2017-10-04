@@ -1,0 +1,19 @@
+= form_for @scratch do |f|
+  - if @scratch.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@scratch.errors.count, "error")} prohibited this scratch from being saved:"
+      %ul
+        - @scratch.errors.full_messages.each do |message|
+          %li= message
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :items
+    = f.text_area :items
+  .field
+    = f.label :task_group
+    = f.text_field :task_group
+  .actions
+    = f.submit 'Save'

@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @scratch.name
+%p
+  %b Items:
+  = @scratch.items
+%p
+  %b Task group:
+  = @scratch.task_group
+
+= link_to 'Edit', edit_scratch_path(@scratch)
+\|
+= link_to 'Back', scratches_path

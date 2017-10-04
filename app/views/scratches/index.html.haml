@@ -1,0 +1,25 @@
+%h1 Listing scratches
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Items
+      %th Task group
+      %th
+      %th
+      %th
+
+  %tbody
+    - @scratches.each do |scratch|
+      %tr
+        %td= scratch.name
+        %td= scratch.items
+        %td= scratch.task_group
+        %td= link_to 'Show', scratch
+        %td= link_to 'Edit', edit_scratch_path(scratch)
+        %td= link_to 'Destroy', scratch, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Scratch', new_scratch_path
