@@ -6,52 +6,53 @@
   .small-12.small-centered.columns.text-center
     %h1= @day.pretty_calendar
 
-.row
-  %fieldset.small-10.large-8.small-centered.columns
-    %legend Personal hygeine
-    .row
-      .columns
-        %input#checkbox1{type: 'checkbox'}
-        %label{for: 'checkbox1'} Shower
-    .row
-      .columns
-        %input#checkbox2{type: 'checkbox'}
-        %label{for: 'checkbox2'} Wash face
-    .row
-      .columns
-        %input#checkbox3{type: 'checkbox'}
-        %label{for: 'checkbox3'} Shave
-    .row
-      .columns
-        %input#checkbox4{type: 'checkbox'}
-        %label{for: 'checkbox4'} Clean eyes
-    .row
-      .columns
-        %input#checkbox5{type: 'checkbox'}
-        %label{for: 'checkbox5'} Brush teeth (morning)
-    .row
-      .columns
-        %input#checkbox6{type: 'checkbox'}
-        %label{for: 'checkbox6'} Brush teeth (evening)
-    .row
-      .columns
-        %input#checkbox7{type: 'checkbox'}
-        %label{for: 'checkbox7'} Floss
+%form
+  .row
+    %fieldset.small-10.large-8.small-centered.columns
+      %legend Personal hygeine
+      .row
+        .columns
+          %input#checkbox1{type: 'checkbox'}
+          %label{for: 'checkbox1'} Shower
+      .row
+        .columns
+          %input#checkbox2{type: 'checkbox'}
+          %label{for: 'checkbox2'} Wash face
+      .row
+        .columns
+          %input#checkbox3{type: 'checkbox'}
+          %label{for: 'checkbox3'} Shave
+      .row
+        .columns
+          %input#checkbox4{type: 'checkbox'}
+          %label{for: 'checkbox4'} Clean eyes
+      .row
+        .columns
+          %input#checkbox5{type: 'checkbox'}
+          %label{for: 'checkbox5'} Brush teeth (morning)
+      .row
+        .columns
+          %input#checkbox6{type: 'checkbox'}
+          %label{for: 'checkbox6'} Brush teeth (evening)
+      .row
+        .columns
+          %input#checkbox7{type: 'checkbox'}
+          %label{for: 'checkbox7'} Floss
 
-.row
-  %fieldset.small-10.large-8.small-centered.columns
-    %legend Work
-    .row
-      .columns
-        %input#checkbox8{type: 'checkbox'}
-        %label{for: 'checkbox8'} 4 hours (1)
-    .row
-      .columns
-        %input#checkbox9{type: 'checkbox'}
-        %label{for: 'checkbox9'} 4 hours (2)
+  .row
+    %fieldset.small-10.large-8.small-centered.columns
+      %legend Work
+      .row
+        .columns
+          %input#checkbox8{type: 'checkbox'}
+          %label{for: 'checkbox8'} 4 hours (1)
+      .row
+        .columns
+          %input#checkbox9{type: 'checkbox'}
+          %label{for: 'checkbox9'} 4 hours (2)
+      .row
+        .columns
+          %label
+            Work items
+            %textarea{rows: '8'}
 
-.row
-  .small-10.large-8.small-centered.columns
-    %label
-      Work items
-      %textarea{rows: '8'}
